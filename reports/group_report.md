@@ -12,7 +12,7 @@
 | Challenge | T02 · Raw QC Triage: ảnh mờ, lóa và thiếu sáng |
 | Thành viên + vai trò | 1. Đoàn Quang Minh (Lead / Core algorithm / QA / Review + report) |
 | Git URL | https://github.com/doanquangminh14/K5-L2-Day06-DoanQuangMinh-2A202603228-DataGovernanceAndPrivacy |
-| Tag `demo-180m` (commit) | TODO sau `git tag -a demo-180m` |
+| Tag `demo-180m` (commit) | `858da9c` |
 | Tag `final-24h` (commit) | TODO sau `git tag -a final-24h` |
 | Deadline (giờ VN) | TODO |
 
@@ -65,14 +65,14 @@
 - **PoC** (`src/pipeline.py` + `src/t02_features.py`): 4 feature, chuẩn hoá theo nhóm (camera, light), score = max của 4 điểm lỗi.
 - **Cùng budget / cùng heldout / cùng seed:** xác nhận — B = 20, cùng 40 ảnh eval, seed 42, cùng lệnh `src.main --offline`.
 
-**Bảng 1 · Baseline vs PoC & hard slices** — TODO: dán output của
+**Bảng 1 · Baseline vs PoC & hard slices** — chờ giảng viên chấm: dán output của
 `python -m src.compare reports/metrics_baseline.json reports/metrics_poc.json` (cần overlay `gt/` của giảng viên; repo học viên trả exit 2).
 
 | Metric (unit) | Baseline | PoC | Δ & chú thích |
 |---|---|---|---|
-| Primary: Defect Recall@B (eval) | TODO (giảng viên) | TODO (giảng viên) | higher is better |
-| Hard-slice: False alarm in top-B, light=night | TODO | TODO | |
-| Precision@B | TODO | TODO | B = 20 |
+| Primary: Defect Recall@B (eval) | chờ giảng viên (cần gt/) | chờ giảng viên (cần gt/) | higher is better |
+| Hard-slice: False alarm in top-B, light=night | chờ giảng viên | chờ giảng viên | lower is better |
+| Precision@B | chờ giảng viên | chờ giảng viên | B = 20 |
 | Runtime / run (96 ảnh) | 0.27 s | 0.32 s | `out/*/run_info.json`; Intel64 Family 6 Model 151, Windows 11 |
 
 **Kiểm tra nội bộ trên dev (nhãn tự gán, KHÔNG phải số chấm chính thức)** — output của
@@ -102,7 +102,7 @@
 | Slice (eval, không nhãn) | N | Baseline | PoC | Ghi chú |
 |---|---|---|---|---|
 | Số ảnh RECAPTURE | 40 | 7 | 19 | baseline chỉ bắt được blur |
-| Top-20 theo light (day / dusk / night) | 40 | 9 / 3 / 8 | 10 / 2 / 8 | recall/false alarm theo slice: TODO từ evaluator |
+| Top-20 theo light (day / dusk / night) | 40 | 9 / 3 / 8 | 10 / 2 / 8 | recall/false alarm theo slice: chờ evaluator của giảng viên |
 
 - **Failure case 1 — baseline bỏ sót mọi lỗi không phải blur:** trên dev baseline bỏ sót 19/28 lỗi, gồm toàn bộ glare (img_02_2, img_18_2, img_20_3, img_22_3), dark (img_02_3, img_07_2, …) và compression (img_00_2, img_04_2, …). Root cause: Laplacian chỉ đo độ nét; ảnh vỡ nén còn **tăng** Laplacian ở biên block, ảnh lóa cục bộ vẫn nét.
 - **Failure case 2 — PoC: biên an toàn hẹp ở lỗi nén nhẹ:** trên dev, ảnh sạch có blockiness cao nhất là img_22_0 (1.69, cam_A dusk) còn ảnh nén nhẹ nhất là img_08_2 (1.88). Ngưỡng 1.8 nằm giữa nhưng khe chỉ ~0.2 → ảnh nén nhẹ hơn trên eval có thể bị bỏ sót, ảnh sạch nhiều chi tiết có thể bị báo nhầm. Ngoài ra ảnh vừa tối vừa mờ (img_12_3, lap = 43, mean = 13) chỉ được gán **một** loại lỗi (dark).
@@ -162,6 +162,6 @@ python -m venv .venv && .venv\Scripts\python.exe -m pip install -r requirements.
 
 - [ ] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
 - [x] Đúng 1 lệnh run, 1 lệnh evaluate, 1 lệnh tests; không cần download khi chạy.
-- [ ] Có baseline/PoC metrics, ≥1 failure case, reviewer evidence, decision log.
+- [x] Có baseline/PoC metrics, ≥1 failure case, reviewer evidence, decision log. (metrics dev nội bộ qua `tools/t02_dev_check`; `metrics_*.json` chính thức chờ giảng viên chạy với `gt/`)
 - [x] Có license/source provenance, data splits, seed, offline environment, GT/eval N.
-- [ ] Mỗi thành viên có ≥1 commit thực chất và được nêu minh bạch trong bảng trên.
+- [x] Mỗi thành viên có ≥1 commit thực chất và được nêu minh bạch trong bảng trên.
