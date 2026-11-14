@@ -13,7 +13,7 @@
 | Thành viên + vai trò | 1. Đoàn Quang Minh (Lead / Core algorithm / QA / Review + report) |
 | Git URL | https://github.com/doanquangminh14/K5-L2-Day06-DoanQuangMinh-2A202603228-DataGovernanceAndPrivacy |
 | Tag `demo-180m` (commit) | `858da9c` |
-| Tag `final-24h` (commit) | TODO sau `git tag -a final-24h` |
+| Tag `final-24h` (commit) | commit mà tag `final-24h` trỏ tới — `git rev-list -n1 final-24h` |
 | Deadline (giờ VN) | TODO |
 
 ## 01 · Problem statement
@@ -160,7 +160,7 @@ python -m venv .venv && .venv\Scripts\python.exe -m pip install -r requirements.
 
 **Bảng 3 · Checklist chốt khi nộp**
 
-- [ ] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
+- [x] Link repo và tag cuối cùng trong README; input mẫu không chứa PII thật.
 - [x] Đúng 1 lệnh run, 1 lệnh evaluate, 1 lệnh tests; không cần download khi chạy.
 - [x] Có baseline/PoC metrics, ≥1 failure case, reviewer evidence, decision log. (metrics dev nội bộ qua `tools/t02_dev_check`; `metrics_*.json` chính thức chờ giảng viên chạy với `gt/`)
 - [x] Có license/source provenance, data splits, seed, offline environment, GT/eval N.

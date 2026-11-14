@@ -155,7 +155,13 @@ def run(ctx: RunContext) -> None:
     scored = process(ctx, data)
     ctx.stats["n_items"] = len(scored)
     queue = rank(ctx, scored)
+    ctx.audit.log(actor="pipeline", action="review_queue_created", item_id="review_queue.csv",
+                  after={"budget": len(queue), "items": queue.item_id.tolist()},
+                  reason="top-B by score; awaiting reviewer decisions in review_queue_reviewed.csv")
     final = review(ctx, scored, queue)
     final = final.sort_values("score", ascending=False, kind="mergesort")
     final[spec.pred_columns + [c for c in final.columns if c not in spec.pred_columns]].to_csv(ctx.out(spec.pred_file), index=False)
-    write_decision(decide(ctx, final), ctx.out("decision.json"), ctx.out("decision_log.csv"))
+    decision = decide(ctx, final)
+    write_decision(decision, ctx.out("decision.json"), ctx.out("decision_log.csv"))
+    ctx.audit.log(actor=decision.owner, action=f"decision:{decision.canonical}", item_id=decision.scope,
+                  after=decision.metrics, reason=f"{decision.reason_code}: {decision.reason}")

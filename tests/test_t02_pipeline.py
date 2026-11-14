@@ -25,7 +25,7 @@ def test_poc_end_to_end_and_reproducible(tmp_path):
     assert set(pred.image_id) == set(imgs.image_id) and pred.image_id.is_unique
     assert np.isfinite(pred.score).all()
     assert set(pred.pred_action) <= {"KEEP", "RECAPTURE"}
-    for f in ["review_queue.csv", "contact_sheet.html", "decision.json", "decision_log.csv"]:
+    for f in ["review_queue.csv", "contact_sheet.html", "decision.json", "decision_log.csv", "audit_log.jsonl"]:
         assert (tmp_path / "a" / f).exists(), f
     assert len(pd.read_csv(tmp_path / "a" / "review_queue.csv")) == 20
     d = json.loads((tmp_path / "a" / "decision.json").read_text(encoding="utf-8"))

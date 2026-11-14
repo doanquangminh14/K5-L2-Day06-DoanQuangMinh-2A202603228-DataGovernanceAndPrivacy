@@ -1,5 +1,17 @@
 # Day 06 · Data Lab · Field-to-Release PoC (AI20K · Data Track)
 
+> **Bài nộp G01 · T02 Raw QC Triage** — Đoàn Quang Minh
+> Repo: https://github.com/doanquangminh14/K5-L2-Day06-DoanQuangMinh-2A202603228-DataGovernanceAndPrivacy ·
+> tag demo `demo-180m` (`858da9c`) · tag cuối `final-24h` ·
+> report: [reports/group_report.md](reports/group_report.md) · slides: [demo/T02_demo.pdf](demo/T02_demo.pdf)
+>
+> ```bash
+> python -m src.main --config configs/lab.yaml --track t02 --output out/poc --run-name poc --offline --seed 42
+> python -m src.main --track t02 --pipeline src.baseline_t02 --output out/baseline --run-name baseline --offline --seed 42
+> python -m src.evaluate --track t02 --pred out/poc/ranked_review.csv --run-name poc --out reports/metrics_poc.json   # cần gt/ của giảng viên
+> pytest -q
+> ```
+
 Starter repo cho bài lab **Data Pipeline, Privacy & Production PoC**: 14 challenge (T01–T14), một contract chung.
 Repo cung cấp **dữ liệu offline + hạ tầng dùng chung + metric chuẩn + template báo cáo** để nhóm tập trung vào phần quan trọng:
 vấn đề, baseline, thuật toán, đánh giá trung thực, human-in-the-loop và quyết định GO/HOLD/REWORK.
