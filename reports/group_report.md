@@ -14,7 +14,7 @@
 | Git URL | https://github.com/doanquangminh14/K5-L2-Day06-DoanQuangMinh-2A202603228-DataGovernanceAndPrivacy |
 | Tag `demo-180m` (commit) | `858da9c` |
 | Tag `final-24h` (commit) | commit mà tag `final-24h` trỏ tới — `git rev-list -n1 final-24h` |
-| Deadline (giờ VN) | TODO |
+| Deadline (giờ VN) | 2026-11-15 12:00 (GMT+7) |
 
 ## 01 · Problem statement
 
