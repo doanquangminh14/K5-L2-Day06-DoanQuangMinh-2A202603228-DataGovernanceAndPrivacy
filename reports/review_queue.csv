@@ -1,0 +1,21 @@
+rank,item_id,score,reason,suggested_action,slice,evidence_path,reviewer,reviewer_decision,override_value,review_note,reviewed_at
+1,img_17_2,20,"glare=20.00 (lap=465, mean=181, sat_local=1.000, block=1.10)",RECAPTURE,cam_A/day,images/img_17_2.jpg,Đoàn Quang Minh,approve,,"Vệt chói lớn giữa khung, xe và biển số cháy sáng",2026-11-14T10:04:43.049Z
+2,img_05_3,3.422222,"glare=3.42 (lap=1324, mean=124, sat_local=0.171, block=1.37)",RECAPTURE,cam_A/day,images/img_05_3.jpg,Đoàn Quang Minh,approve,,"Lóa đèn pha, vùng biển số cháy trắng",2026-11-14T10:04:43.049Z
+3,img_06_2,3.363558,"compression=3.36 (lap=347, mean=27, sat_local=0.002, block=3.69)",RECAPTURE,cam_B/night,images/img_06_2.jpg,Đoàn Quang Minh,approve,,"Vỡ khối bậc thang rõ, ảnh đêm tối",2026-11-14T10:04:43.049Z
+4,img_22_2,3.320582,"compression=3.32 (lap=635, mean=91, sat_local=0.005, block=3.66)",RECAPTURE,cam_A/dusk,images/img_22_2.jpg,Đoàn Quang Minh,approve,,"Vỡ khối ở mép nhà và xe, màu loang",2026-11-14T10:04:43.049Z
+5,img_00_2,2.982296,"compression=2.98 (lap=359, mean=117, sat_local=0.002, block=3.39)",RECAPTURE,cam_B/day,images/img_00_2.jpg,Đoàn Quang Minh,approve,,"Mép đường răng cưa, xe vỡ khối",2026-11-14T10:04:43.049Z
+6,img_13_3,2.928808,"blur=2.93 (lap=2, mean=35, sat_local=0.000, block=1.20)",RECAPTURE,cam_A/night,images/img_13_3.jpg,Đoàn Quang Minh,approve,,"Nhòe toàn khung, không đọc được biển số",2026-11-14T10:04:43.049Z
+7,img_21_3,2.84214,"compression=2.84 (lap=251, mean=120, sat_local=0.001, block=3.27)",RECAPTURE,cam_B/day,images/img_21_3.jpg,Đoàn Quang Minh,approve,,Vỡ khối ở nhà và xe,2026-11-14T10:04:43.049Z
+8,img_04_2,2.826852,"compression=2.83 (lap=498, mean=88, sat_local=0.004, block=3.26)",RECAPTURE,cam_A/dusk,images/img_04_2.jpg,Đoàn Quang Minh,approve,,"Vỡ khối, xe máy và người bị méo",2026-11-14T10:04:43.049Z
+9,img_10_2,2.755837,"compression=2.76 (lap=745, mean=119, sat_local=0.003, block=3.20)",RECAPTURE,cam_A/day,images/img_10_2.jpg,Đoàn Quang Minh,approve,,"Mép đường răng cưa, biển số vỡ",2026-11-14T10:04:43.049Z
+10,img_05_2,2.695751,"compression=2.70 (lap=804, mean=121, sat_local=0.006, block=3.16)",RECAPTURE,cam_A/day,images/img_05_2.jpg,Đoàn Quang Minh,approve,,Vỡ khối ở cụm xe giữa đường,2026-11-14T10:04:43.049Z
+11,img_23_2,2.570394,"compression=2.57 (lap=679, mean=116, sat_local=0.004, block=3.06)",RECAPTURE,cam_A/day,images/img_23_2.jpg,Đoàn Quang Minh,approve,,"Vỡ khối, mất chi tiết người và xe",2026-11-14T10:04:43.049Z
+12,img_04_3,2.358292,"blur=2.36 (lap=3, mean=88, sat_local=0.000, block=1.10)",RECAPTURE,cam_A/dusk,images/img_04_3.jpg,Đoàn Quang Minh,approve,,Nhòe toàn khung,2026-11-14T10:04:43.049Z
+13,img_11_2,2.33579,"compression=2.34 (lap=676, mean=126, sat_local=0.003, block=2.87)",RECAPTURE,cam_A/day,images/img_11_2.jpg,Đoàn Quang Minh,approve,,Vỡ khối rõ ở xe và viền nhà,2026-11-14T10:04:43.049Z
+14,img_07_3,2.310889,"blur=2.31 (lap=5, mean=122, sat_local=0.000, block=1.16)",RECAPTURE,cam_A/day,images/img_07_3.jpg,Đoàn Quang Minh,approve,,"Mờ toàn khung, biển số không đọc được",2026-11-14T10:04:43.049Z
+15,img_11_3,2.294219,"blur=2.29 (lap=5, mean=126, sat_local=0.000, block=1.16)",RECAPTURE,cam_A/day,images/img_11_3.jpg,Đoàn Quang Minh,approve,,Mờ toàn khung,2026-11-14T10:04:43.049Z
+16,img_19_3,2.287757,"blur=2.29 (lap=5, mean=118, sat_local=0.000, block=1.10)",RECAPTURE,cam_A/day,images/img_19_3.jpg,Đoàn Quang Minh,approve,,Mờ toàn khung,2026-11-14T10:04:43.049Z
+17,img_18_3,2.284751,"blur=2.28 (lap=2, mean=32, sat_local=0.000, block=1.19)",RECAPTURE,cam_B/night,images/img_18_3.jpg,Đoàn Quang Minh,approve,,"Nhòe mạnh, ảnh cũng tối",2026-11-14T10:04:43.049Z
+18,img_15_3,2.257782,"dark=2.26 (lap=15, mean=3, sat_local=0.000, block=1.63)",RECAPTURE,cam_B/dusk,images/img_15_3.jpg,Đoàn Quang Minh,approve,,Gần như đen hoàn toàn,2026-11-14T10:04:43.049Z
+19,img_16_2,2.255028,"blur=2.26 (lap=5, mean=124, sat_local=0.000, block=1.16)",RECAPTURE,cam_A/day,images/img_16_2.jpg,Đoàn Quang Minh,approve,,"Mờ, mép xe không sắc",2026-11-14T10:04:43.049Z
+20,img_14_2,2.21323,"blur=2.21 (lap=6, mean=124, sat_local=0.000, block=1.05)",RECAPTURE,cam_A/day,images/img_14_2.jpg,Đoàn Quang Minh,approve,,"Mờ, biển số không đọc được",2026-11-14T10:04:43.049Z

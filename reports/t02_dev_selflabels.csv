@@ -1,0 +1,57 @@
+image_id,defect_type,labeler,note
+img_00_0,none,group,cam_B soft optics (hard negative)
+img_00_1,none,group,
+img_00_2,compression,group,
+img_00_3,blur,group,
+img_02_0,none,group,
+img_02_1,none,group,
+img_02_2,glare,group,local glare on plate
+img_02_3,dark,group,
+img_04_0,none,group,
+img_04_1,none,group,
+img_04_2,compression,group,
+img_04_3,blur,group,
+img_07_0,none,group,
+img_07_1,none,group,
+img_07_2,dark,group,
+img_07_3,blur,group,
+img_08_0,none,group,
+img_08_1,none,group,
+img_08_2,compression,group,mild
+img_08_3,dark,group,
+img_09_0,none,group,cam_B soft optics (hard negative)
+img_09_1,none,group,
+img_09_2,blur,group,
+img_09_3,compression,group,mild
+img_10_0,none,group,
+img_10_1,none,group,
+img_10_2,compression,group,
+img_10_3,dark,group,
+img_11_0,none,group,
+img_11_1,none,group,
+img_11_2,compression,group,
+img_11_3,blur,group,
+img_12_0,none,group,cam_B soft optics (hard negative)
+img_12_1,none,group,
+img_12_2,compression,group,mild
+img_12_3,dark,group,
+img_14_0,none,group,
+img_14_1,none,group,
+img_14_2,blur,group,
+img_14_3,compression,group,
+img_18_0,none,group,useful night image (hard negative)
+img_18_1,none,group,useful night image (hard negative)
+img_18_2,glare,group,night: sharp image with local plate glare
+img_18_3,blur,group,
+img_20_0,none,group,
+img_20_1,none,group,
+img_20_2,dark,group,
+img_20_3,glare,group,local glare on plate
+img_21_0,none,group,cam_B soft optics (hard negative)
+img_21_1,none,group,
+img_21_2,blur,group,
+img_21_3,compression,group,
+img_22_0,none,group,
+img_22_1,none,group,
+img_22_2,compression,group,
+img_22_3,glare,group,

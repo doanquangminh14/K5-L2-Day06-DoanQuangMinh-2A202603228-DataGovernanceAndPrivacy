@@ -1,0 +1,5 @@
+ts,scope,status,canonical,reason_code,reason,owner,evidence
+2026-11-14T08:28:36+00:00,t02:t02_raw_qc,HOLD,HOLD,HUMAN_REVIEW_PENDING,top-20 queue not reviewed yet (47 flagged RECAPTURE),Doan Quang Minh (Data QC owner),out\poc\ranked_review.csv;out\poc\review_queue.csv
+2026-11-14T08:33:35+00:00,t02:t02_raw_qc,HOLD,HOLD,HUMAN_REVIEW_PENDING,top-20 queue not reviewed yet (47 flagged RECAPTURE),Đoàn Quang Minh (Data QC owner),out\poc\ranked_review.csv;out\poc\review_queue.csv
+2026-11-14T09:52:05+00:00,t02:t02_raw_qc,HOLD,HOLD,HUMAN_REVIEW_PENDING,top-20 queue not reviewed yet (47 flagged RECAPTURE),Đoàn Quang Minh (Data QC owner),out\poc\ranked_review.csv;out\poc\review_queue.csv
+2026-11-14T10:07:41+00:00,t02:t02_raw_qc,GO,GO,QC_PASSED_WITH_RECAPTURES,release 49 images; 47 sent to recapture,Đoàn Quang Minh (Data QC owner),out\poc\ranked_review.csv;out\poc\review_queue.csv
