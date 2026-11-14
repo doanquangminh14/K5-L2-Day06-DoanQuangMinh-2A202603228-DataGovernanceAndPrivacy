@@ -129,7 +129,7 @@ python -m venv .venv && .venv\Scripts\python.exe -m pip install -r requirements.
 ```
 
 - **Output của `pytest`:** `55 passed, 39 skipped` (39 skipped = test cần `gt/` của giảng viên). Test của nhóm `tests/test_t02_pipeline.py`: 8 passed — E2E + tái lập, PoC > baseline trên dev, cam_B/đêm không bị báo nhầm, glare cục bộ bị bắt, ảnh hằng số không crash, override + audit, review thiếu reviewer → exit 2, input bị sửa → exit 2.
-- **Máy:** Intel64 Family 6 Model 151 · Windows 11 · Python 3.11.9 · git sha: TODO sau commit.
+- **Máy:** Intel64 Family 6 Model 151 · Windows 11 · Python 3.11.9 · git sha: `4b408e8`.
 - Thay đổi hạ tầng: `tests/test_cli.py::test_template_pipeline_fails_clearly_not_silently` chuyển từ t02 sang t03 vì t02 đã được cài (hành vi kiểm tra — exit 3 khi chưa cài — giữ nguyên).
 
 ## 09 · Limitations & ethics
@@ -145,18 +145,16 @@ python -m venv .venv && .venv\Scripts\python.exe -m pip install -r requirements.
 
 | Học viên | Git author/email | Module / vai trò | Commit SHA / diff chứng minh | Trình bày? |
 |---|---|---|---|---|
-| Đoàn Quang Minh | doanquangminh14 / dminh14102005@gmail.com | Toàn bộ T02: features, pipeline, baseline, dev check, tests, report | TODO (`git log --oneline`) | có |
+| Đoàn Quang Minh | doanquangminh14 / dminh14102005@gmail.com | Toàn bộ T02: features, pipeline, baseline, dev check, tests, report | `4b408e8` feat(t02): group-normalised QC scoring, Laplacian baseline, HITL review, tests, report | có |
 
 ## 11 · References
 
 | URL | Ngày xem | 1–2 dòng ý nghĩa (không chép nguyên văn) |
 |---|---|---|
-| https://acdc.vision.ee.ethz.ch/ — ACDC: Adverse Conditions Dataset (ETH Zürich) | TODO | Dataset ảnh lái xe trong sương/đêm/mưa/tuyết: cho thấy ảnh đêm là điều kiện hợp lệ, không phải lỗi → lý do chuẩn hoá theo `light`. |
-| ISO/IEC TR 5259 (Data quality for analytics and ML) — trích dẫn trong handout | TODO | Khung chất lượng dữ liệu cho ML: QC phải có tiêu chí, owner, bằng chứng → decision có `reason_code` + `owner` + audit log. |
-| Pech-Pacheco et al. (2000), "Diatom autofocusing in brightfield microscopy: a comparative study" (ICPR) | TODO | Variance of Laplacian là thước đo độ nét đơn giản, hiệu quả → feature blur. |
-| Wang, Bovik & Evans (2000), "Blind measurement of blocking artifacts in images" (ICIP) | TODO | Đo vỡ khối JPEG bằng chênh lệch tại biên block 8×8 so với phần còn lại → feature blockiness. |
-
-> TODO: mở từng nguồn, ghi ngày xem thật và URL/DOI chính xác trước khi nộp.
+| Sakaridis, Dai & Van Gool (2021), "ACDC: The Adverse Conditions Dataset with Correspondences for Semantic Driving Scene Understanding", ICCV 2021 · https://openaccess.thecvf.com/content/ICCV2021/html/Sakaridis_ACDC_The_Adverse_Conditions_Dataset_With_Correspondences_for_Semantic_Driving_ICCV_2021_paper.html · dataset: https://acdc.vision.ee.ethz.ch/ | 2026-11-14 | 4006 ảnh lái xe chia đều cho sương / đêm / mưa / tuyết, đều có nhãn — ảnh đêm là điều kiện vận hành hợp lệ chứ không phải lỗi → lý do chuẩn hoá độ sáng/độ nét theo nhóm `light` thay vì một ngưỡng tuyệt đối. |
+| ISO/IEC TR 5259-6:2026, "Artificial intelligence — Data quality for analytics and ML — Part 6: Visualization framework for data quality" · https://www.iso.org/standard/5259-6 (cả bộ: Part 1 https://www.iso.org/standard/81088.html) | 2026-11-14 | Bộ 5259 định nghĩa đo lường, quản lý và quản trị chất lượng dữ liệu cho ML; Part 6 hướng dẫn trực quan hoá kết quả đo chất lượng cho các bên liên quan → contact sheet + `reason` hiển thị giá trị feature, decision có `reason_code`, `owner`, audit log. (Chỉ đọc mô tả trên trang ISO, không đọc toàn văn có phí.) |
+| Pech-Pacheco, Cristóbal, Chamorro-Martínez & Fernández-Valdivia (2000), "Diatom autofocusing in brightfield microscopy: a comparative study", ICPR 2000, vol. 3, pp. 3318–3321 · DOI: https://doi.org/10.1109/ICPR.2000.903548 | 2026-11-14 | So sánh các thước đo lấy nét; biến thể dựa trên Laplacian cho độ đo độ nét tin cậy, nhanh, bền với nhiễu → dùng phương sai Laplacian làm feature blur (và là baseline của đề). |
+| Wang, Bovik & Evans (2000), "Blind measurement of blocking artifacts in images", IEEE ICIP 2000, vol. 3, pp. 981–984 · DOI: https://doi.org/10.1109/ICIP.2000.899622 · PDF: https://live.ece.utexas.edu/publications/2000/zw_icip_2000_blindblock.pdf | 2026-11-14 | Coi ảnh vỡ khối = ảnh gốc + tín hiệu khối có chu kỳ 8 px; đo năng lượng tín hiệu đó mà không cần ảnh gốc. Nhóm dùng phiên bản đơn giản hoá: tỉ lệ chênh lệch tại biên 8 px / chênh lệch bên trong block (không dùng FFT như bài báo). |
 
 ---
 

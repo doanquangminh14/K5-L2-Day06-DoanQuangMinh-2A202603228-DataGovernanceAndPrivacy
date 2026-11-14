@@ -1,2 +1,2 @@
 member,git_author_name,git_email,role,modules_files,commit_shas,evidence_note,presenter
-Đoàn Quang Minh,doanquangminh14,dminh14102005@gmail.com,Lead / Core algorithm / QA / Report,src/t02_features.py; src/pipeline.py; src/baseline_t02.py; tools/t02_dev_check.py; tests/test_t02_pipeline.py; configs/lab.yaml; reports/,TODO: điền SHA sau khi commit (git log --oneline),TODO,yes
+Đoàn Quang Minh,doanquangminh14,dminh14102005@gmail.com,Lead / Core algorithm / QA / Report,src/t02_features.py; src/pipeline.py; src/baseline_t02.py; tools/t02_dev_check.py; tests/test_t02_pipeline.py; configs/lab.yaml; reports/,4b408e8,"T02 features + pipeline (5 steps) + Laplacian baseline + dev check + 8 tests + HITL review (20 items) + report",yes
